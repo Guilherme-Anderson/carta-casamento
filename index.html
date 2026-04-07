@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taynara & Guilherme - 18 de Abril</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="calendar-view" class="container">
+        <img src="logo.png" alt="Logo Casamento" class="logo-wedding">
+        <header>
+            <h1>ABRIL DE 2026</h1>
+            <p>Save the Date</p>
+        </header>
+        <div class="calendar-grid">
+            <div class="day-label">D</div><div class="day-label">S</div><div class="day-label">T</div>
+            <div class="day-label">Q</div><div class="day-label">Q</div><div class="day-label">S</div><div class="day-label">S</div>
+            
+            <div class="day"></div><div class="day"></div><div class="day"></div>
+            <div class="day">1</div><div class="day">2</div><div class="day">3</div><div class="day">4</div>
+            <div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div>
+            <div class="day">9</div><div class="day">10</div><div class="day">11</div><div class="day">12</div>
+            <div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div>
+            <div class="day">17</div>
+            <div class="day wedding" onclick="validarAcessoDia()">18</div>
+            <div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div>
+            <div class="day">23</div><div class="day">24</div><div class="day">25</div><div class="day">26</div>
+            <div class="day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div>
+        </div>
+    </div>
+
+    <div id="tela-login">
+        <img src="logo.png" alt="Logo Casamento" class="logo-wedding">
+        <div class="login-box">
+            <p class="dica">Dica da senha: O que você é?</p>
+            <input type="text" id="senha" placeholder="Sua resposta..." autocomplete="off">
+            <button id="btn-entrar" onclick="checarSenha()">ENTRAR</button>
+            <p id="erro" class="error-text">Ainda não é isso... ❤️</p>
+            <button class="btn-back" onclick="fecharLogin()">Voltar ao Calendário</button>
+        </div>
+    </div>
+
+    <div id="app-mensagens" class="container" style="display: none;">
+        <img src="logo.png" alt="Logo Casamento" class="logo-wedding">
+        <header>
+            <p class="title-wedding">18 de Abril</p>
+        </header>
+        <nav id="lista-mensagens"></nav>
+    </div>
+
+    <div id="modal">
+        <span class="close" onclick="fecharModal()">&times;</span>
+        <div class="modal-wrapper" id="modal-scroll-area">
+            <div class="modal-content">
+                <div id="modal-hora-top"></div>
+                <p id="modal-texto"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
