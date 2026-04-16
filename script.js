@@ -1,9 +1,11 @@
-const SENHA = "maravilhosa";
+const SENHA = "Maravilhosa";
 const MODO_TESTE = true; // Mude para false para o dia real
 const HORA_TESTE = "18:00";
 
 const mensagens = [
-    { h: "06:00", t: "Início do Dia", m: "Boom dia meu amor, o dia finalmente chegou, FINALMENTE.\n\nEssa daqui provavelmente é a primeira vez que estamos nos falando e eu queria dizer basicamente duas coisas:\n\n1 - TE AMO MUITO e vou fazer de tudo para que esse dia seja perfeito para nós, tente por favor nao se estressar com coisas bobas (sei que é dificil) apenas aproveite ao maximo esse dia, voce principalmente trabalhou e se dedicou muito para que esse dia fosse do nosso jeitinho entao aproveite cada momento porque eles nao voltam.\n\n2 - Agradecimentos a Samira que falou \"So um toque, seria bom voce pensar em alguma surpresa pra ela durante o dia, talvez uma carta ...\".\nAi pensei porque nao reprisar a carta que voce mais gostou de receber e aqui estamos nos ....\n\nConforme as horas forem passando vai ir sendo liberado as proximas mensagens, espero que goste, até a proxima mensagem, TE AMO" },
+    {   h: "06:00",
+        t: "O Despertar do Grande Dia",
+        m: "Bom dia, meu amor! O dia finalmente chegou. FINALMENTE! 💍\n\nEssa daqui provavelmente é a primeira vez que estamos nos falando hoje e eu queria te dizer, basicamente, três coisas:\n\n1. EU TE AMO MUITO. Vou fazer de tudo para que esse dia seja perfeito para nós. Tente, por favor, não se estressar com coisas bobas (sei que é difícil!), apenas aproveite ao máximo. Você trabalhou e se dedicou muito para que tudo fosse do nosso jeitinho, então curta cada segundo, porque esses momentos não voltam.\n\n2. Um agradecimento especial à Samira. Ela me deu um toque: \"Seria bom você pensar em alguma surpresa para ela durante o dia, talvez uma carta...\". Aí eu pensei: por que não reprisar a ideia da carta que você mais gostou de receber? E aqui estamos nós...\n\n3. Sobre o meu jeitinho. Sei que às vezes tenho dificuldades para expressar meus sentimentos com você e é algo que estou aprendendo a cada dia. Nessa reta final, estou muito ansioso com tudo o que está acontecendo e mudando; estou louco para viver essa próxima etapa da vida com você e conquistar tudo o que sonhamos. Agradeço muito a Deus por ter reservado você para mim.\n\nConforme as horas forem passando, novas mensagens serão liberadas. Espero que goste! Até a próxima...\n\nTE AMO! ❤️"},
     { h: "10:00", t: "Dia de Noiva", m: "Você deve estar no salão agora. Aproveite, rainha!" },
     { h: "12:00", t: "Tarde do nosso Dia", m: "O coração já está batendo forte por aqui!" },
     { h: "14:00", t: "Últimos preparativos", m: "Falta muito pouco para te ver de branco!" },
