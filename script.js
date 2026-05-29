@@ -1,5 +1,5 @@
 const SENHA = "maravilhosa";
-const MODO_TESTE = false; // Mude para false para o dia real
+const MODO_TESTE = true; // Mude para false para o dia real
 const HORA_TESTE = "18:00";
 
 const mensagens = [
