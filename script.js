@@ -1,6 +1,4 @@
 const SENHA = "maravilhosa";
-const MODO_TESTE = true; // Mude para false para o dia real
-const HORA_TESTE = "18:00";
 
 const mensagens = [
     {   h: "06:00",
@@ -22,19 +20,12 @@ const mensagens = [
         h: "15:30",
         t: "O Nosso Momento Chegou",
         m: "Meu amor, se você está lendo isso, é porque faltam apenas alguns minutos ou talvez segundos para a gente se encontrar no altar.\n\nEu sei que agora o seu coração deve estar batendo na boca e o frio na barriga parece que não vai passar, mas eu quero te pedir uma coisa: respira fundo. Esquece as câmeras, os convidados, a decoração e qualquer detalhe que tenha te preocupado até aqui. Quando estiver entrando e a música tocar, foca só em mim. Eu vou estar lá na frente, te esperando com todo o amor e ansiedade do mundo.\n\nAproveite cada passo dessa caminhada, sinta o chão sob os seus pés e olhe para as pessoas que nos amam, mas lembre-se que todo mundo que está lá é apenas para nos privilegiar e apoiar nesse momento.\n\nNão preciso nem te ver para saber que você está maravilhosa! O nosso dia está perfeito e Deus já preparou cada detalhe desse novo capítulo que começamos agora.\n\nEstou muito ansioso por tudo o que vamos viver. Obrigado por cada momento que passamos juntos e por todo o apoio que você me deu; você tem sido extremamente importante em cada passo meu e eu conto com você para ser minha companheira pelo resto da vida.\n\nTe amo muito e não sei nem como expressar. Nos vemos em instantes, minha noiva, minha esposa!\n\nTE AMO MUITO MUITO MUITO! ❤️💍"
-}
+    }
 ];
 
+// 1. Agora o acesso à tela de login é direto, sem checar data
 function validarAcessoDia() {
-    const agora = new Date();
-    // No JS, Janeiro é 0, Fevereiro é 1, Março é 2, Abril é 3.
-    const eDiaDezoito = (agora.getDate() === 18 && agora.getMonth() === 3);
-
-    if (eDiaDezoito || MODO_TESTE) {
-        abrirLogin();
-    } else {
-        alert("Nosso dia está chegando e logo você vai poder acessar minha carta para nosso momento, volte aqui no nosso dia ❤️");
-    }
+    abrirLogin();
 }
 
 function abrirLogin() { 
@@ -63,35 +54,25 @@ function checarSenha() {
     }
 }
 
+// 2. Simplificado: Removeu as variáveis de hora e exibe TODOS os botões liberados
 function gerarMenu() {
     const lista = document.getElementById('lista-mensagens');
-    let agora = new Date();
-    if(MODO_TESTE) {
-        const [h, m] = HORA_TESTE.split(':').map(Number);
-        agora.setHours(h, m);
-    }
-    const minAtual = agora.getHours() * 60 + agora.getMinutes();
-    
     lista.innerHTML = "";
+    
     mensagens.forEach(item => {
-        const [h, m] = item.h.split(':').map(Number);
-        const minItem = h * 60 + m;
         const btn = document.createElement('button');
         btn.className = 'btn-msg';
         
-        if(minAtual >= minItem) {
-            btn.innerHTML = `<strong>${item.h}</strong> — ${item.t}`;
-            btn.onclick = () => {
-                document.getElementById('modal-hora-top').innerText = item.h + " - " + item.t;
-                document.getElementById('modal-texto').innerText = item.m;
-                document.getElementById('modal').style.display = 'block';
-                document.getElementById('modal-scroll-area').scrollTop = 0;
-                document.body.style.overflow = 'hidden';
-            };
-        } else {
-            btn.innerHTML = `<strong>${item.h}</strong> — Em breve... 🔒`;
-            btn.className += ' bloqueado';
-        }
+        // Todas as mensagens entram direto como liberadas
+        btn.innerHTML = `<strong>${item.h}</strong> — ${item.t}`;
+        btn.onclick = () => {
+            document.getElementById('modal-hora-top').innerText = item.h + " - " + item.t;
+            document.getElementById('modal-texto').innerText = item.m;
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('modal-scroll-area').scrollTop = 0;
+            document.body.style.overflow = 'hidden';
+        };
+        
         lista.appendChild(btn);
     });
 }
